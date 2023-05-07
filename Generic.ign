@@ -1,0 +1,166 @@
+{
+  "ignition": {
+    "version": "3.3.0"
+  },
+  "kernelArguments": {
+    "shouldExist": [
+      "spectre_v2=on",
+      "spec_store_bypass_disable=on",
+      "l1tf=full,force",
+      "mds=full,nosmt",
+      "tsx=off",
+      "tsx_async_abort=full,nosmt",
+      "kvm.nx_huge_pages=force",
+      "nosmt=force",
+      "l1d_flush=on",
+      "mmio_stale_data=full,nosmt",
+      "random.trust_bootloader=off",
+      "random.trust_cpu=off",
+      "intel_iommu=on",
+      "amd_iommu=on",
+      "iommu.passthrough=0 iommu.strict=1",
+      "slab_nomerge",
+      "init_on_alloc=1",
+      "init_on_free=1",
+      "pti=on",
+      "vsyscall=none",
+      "page_alloc.shuffle=1",
+      "randomize_kstack_offset=on",
+      "extra_latent_entropy",
+      "debugfs=off"
+    ]
+  },
+  "passwd": {
+    "users": [
+      {
+        "groups": [
+          "wheel",
+          "sudo"
+        ],
+        "name": "mtsdlf",
+        "sshAuthorizedKeys": [
+          "ssh-rsa b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABC2HyJ1rWAT2glgdZ1782c/AAAAEAAAAAEAAAGXAAAAB3NzaC1yc2EAAAADAQABAAABgQCR2mXJXyNf9WZNnC2bXUHUugMGLVbiub1t3E7VowZpwouGOOwcCRSLtcoZGyYScf/eUCnlU1wNwyPYP7xHgt1gpv8FOPoNmw3S5JOTh01ribDm/y2XdjR138CmFkoHsZrfHXHTRmnA2ABDN8vTPB5Pup27pISr8nxuKsYpuBEjFdsPnPcWr7HJ7amvJD7D6xnuEk8/qQN48+K8Xd/chBRgLseLEojAOotFwERZmd7U0pD/NTQ033PU0/k6GxmKD4wwmsqfZJ5s/+Mg+pvckJfUusTn+tGj9ClJy2RsGWZyr9w6Rw01AYoZLI2jV1C96bdPdss63ZSjgY+fnPnvSKRY1DCNtU/a20kkY0iu4TsoNyTVoQFdp22sNVlB7sBZNZUfVNaE79CU3+eBc+CqpdxvZ40NiA/NPfXgpqO/dekEd9FHf4y13cihVhfVgG3RmrfvdI1bUXgNDooD0L3jdR8ntIjTiTTfQZh7r1tQfFd14R4DwC0toFKW8DJgv9IqhKkAAAWQUoXVtOhe8XZr4GvfFvlIGaYL06e26BqNCuY7KkAYO0GtPy9Ob33OThJMabzWTjvrPWh4pIG8TSNtT2T8aJXmfCW8HHVxVkao9YT5mclWY/4nLgv/IrObsr9H+OzYIrwemvyqMbW76DW4oQQ3VFP/bWoIf+T4bhDm8iOrMxnc81i2zSOj9Vco2HEaOwV4tUBOA4Rxxo9teU0E9LZ3UPRmvfCukwhJyRvTd1LuZ7eQ92l/iQzIm3J7aObnZt9v6Xred66LONP5XIplxNT01U9G+pjVCQZJs5aeQ8/p3y/svkiRiGB/l10g0N6j82yooPHjYLehj9dlRqnGSzIprOMcMh0VoWuiAu4eaYm+YGpcJQQNCVWT79YxOW9JNXEzwUAd86Y1C/zjtkFGmmq08+rVgMQ+/LazHE/Zy+Gyw80Rl36Ym71xSuKu/fn1iKQxw7l/iG6XtTTeVWXRrx95Nfe1wu7bBoS/BoMO1FEwojUrU7qsNcfYX7Da/rZJlFuvMbeRTF6QGJkPvvijLJny7j1cK0ykulyt95sQCKIXWHNVU7SNOYaoq5HkI0zPW2gBdvXYNgomShQPCAbMPbfWJZntE/PxTvyUgi5ckQLHvsFw3EOZSxUJRI37DcP31koRA+2l/+kT3ePRl5mDYHvYkyJL/5BMv4y8vwpywo0001NHNyGYMOcj7q1lasyCCdmNrU254qt2rqqYOUx6oIG33XWo+MrAKWKLyJu9298EiaTUNDSr4/7gUcEkx1EZsbaaTUWVRMz9roSUfz3Edxyh5tRwRAZ0a1+E4+do/Pg4BBV4Gg9ELPLBur+LqBJrpD/D1mFJyqcwhTMcGGSP+dU+Y04wpR8PXDYTWiOOgxFrE1V9v0WMmjK6PiujCUMcwMXw0bn9kw21s0LynOY/zvC3yJHzjBnOy34brx4SH1ca+aDLOnt/8Eu6LZcmssNGeNib2OzejzCh5gMv/dlRlqnIOoGrogR2CKsWAN/wZYNuFQSAROJUwA2senk8F7haBLGE+lZT2Y1JfobdplPanJraj+E75zx4xTjS0u77zygccrUGeIJGIvfwoLeMpcMMe6DO2gNOgK15N9KWbyl479E26gsL5h4wXYaADbJF9CYMAonxUQkPyrMsW+XEIJvShAqetqO4gk4EXsT+xyNjPLcMzYjNo/XkCD1dT7KEFPhQU7DWqKgQm8EzfQNS0YoNksfzhlshFMMtlicSLElWlU17UmTRQ3t4J6QlbwQCutXY88QQagFVQB36wj2uAbI4sMYqEvQpI2MlFhKzjflpUARzMpXJRqruwOSe1UPEDpWKVgIoY/rn9Vmctx7LfPU0Syri1JJipu1ViUrZAyB0fG07of+oBAC0p0kAaQF4edkXt4XGRucd71673xRspRM+7wnR+ghpGx2lmpPtmEaZX+1/b+FAFwaE6t/6e+k/qDZZQCzPezyim70I5TN43SHru2tUWS9KJuMATvB08I9CQieB22kVvZqgUSh8rEKnMb9B0wYLoPJMwrnW3IAVh0p+sDqtFQlwC9KxSKfPfE6tmNlD9fC91bLsiww10ybhNwrFWzfYXyHZg57+tgO/uVX42U7O0Dzp+ZY/au1st/zcsMsS19cnzn4ow1DnRSnCasQvSx6fGWPlNjbp162iWkJsoBsat47orkqPtG2ZqBXegJMNrygt4qhfB7lkRiyZmkk9DNORiY/2zkwp5yzyzV05ramohWQrWVcSQTYehTQdOus7wG9TkZxf+d5IpFgqBN5SfDxB0Oiz10/YksnghbMtyJZroRKJk6D9N7WcreDdRyImyiYaPpDSc1RF1UOp0pQyk+19k2ChV/322hZW1ggMAQAynx5Ni1AyjUNkGUcHGyJp3tMayvciZ/2D+/hjiGdRtRe8Ego=",
+          "ssh-rsa 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 vX+gVzYhd/2K487eAiwL+WIrBHs="
+        ]
+      }
+    ]
+  },
+  "storage": {
+    "files": [
+      {
+        "path": "/etc/ssh/sshd_config.d/10-custom.conf",
+        "contents": {
+          "source": "data:,X11Forwarding%20no%0AGSSAPIAuthentication%20no%0A"
+        }
+      },
+      {
+        "path": "/etc/zincati/config.d/51-rollout-wariness.toml",
+        "contents": {
+          "source": "data:,%5Bidentity%5D%0Arollout_wariness%20%3D%200%0A"
+        }
+      },
+      {
+        "path": "/etc/zincati/config.d/55-updates-strategy.toml",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/2SNMarEMAxEe51C6ADB1S8+5BRbGmNMLLIGRw62TMieflGRats3b2b8PHNSHgGG9qS837gindxLy2UjePLlQQG0HBw/TdjM2rZUjRD4H3e5iuR2hQA53QNX9EivKYT2lrpGK9qK+3eOoLLs+o5Hkals+p+DbwAAAP//4Po2vKAAAAA="
+        }
+      },
+      {
+        "overwrite": true,
+        "path": "/etc/tuned/active_profile",
+        "contents": {
+          "source": "data:,virtual-guest%0A"
+        }
+      },
+      {
+        "overwrite": true,
+        "path": "/etc/tuned/profile_mode",
+        "contents": {
+          "source": "data:,manual%0A"
+        }
+      },
+      {
+        "overwrite": true,
+        "path": "/etc/security/limits.d/30-disable-coredump.conf",
+        "contents": {
+          "source": "data:,*%20hard%20core%200%0A"
+        }
+      },
+      {
+        "overwrite": true,
+        "path": "/etc/ssh/ssh_config.d/10-custom.conf",
+        "contents": {
+          "source": "data:,GSSAPIAuthentication%20no%0AVerifyHostKeyDNS%20yes%0A"
+        }
+      },
+      {
+        "overwrite": true,
+        "path": "/etc/unbound/unbound.conf",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/3RSQW/bPAy951cIvjN206bfBwM7dsCADRvWXXZkJNomKksuRSVzf/2gGM6QrLMBw3qPj+J7YCI5krQbY+wgMWprqmpjDGaNoJKTAgY7RIGOPbWmqo8otedDncMh5uDqItq+0FxUV4LEfUDPoW/NTGljTKmEF5ohUVAO5FdCfQJLonDIwZVbalJbp+Trgqba4pnmji0qpa0VXVU8DSSpNdW3718/fvr89OH55/OPpy9lmIEdwaA6QU4kgD0FXW88c+zKHDpfgWcLi4Mr/EiSOIYVcxRmwPBHi+IoAPo+goun0As6uiE9Sk/wmkmY0g0n1JEIephQhxsuDfGcTZf47dKT+xCFwDroPF4iHvEXZDfBUnnf/LcrYHTZE9gYOu5bUx3Rs0ONYlhJyk+J6zXgSDBy4JETKscASYXtJbMcThiUHAhNfgYdhNIQvWvNXbM8pSgRWJwSdFGA3aqNWfvIoYepWJlIRtai2z3A435/v98YM5UI1F7Mr+eyMQvWRTmhOHiLgcrCloFbU23L9CtXliJPSYVwXDutHDonrbnbnt938GbbvIPvmuauffj/sVk+7b/0f9ct/X4HAAD//zRdKg9hAwAA"
+        }
+      },
+      {
+        "path": "/etc/systemd/system/unbound.service.d/override.conf",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/2yRQWvcPBCG7/srBN8hp+T43Qxekt12ycYsiUsLpRRZfrMZLGvMzMjEl/72oqUbauhJo2dmmNGj7y+QmQJ+bJ4wsiwPSMtXIcPuHSEbKpOMzUlo9oYHlFJdsXacrnc2BPvMI1bgPnIY1oSTCcdPwnnSVeYRkhCPfP4XfuI+x+v0/1z7Ruo6gR/UZaV0dsphgDmejDipizTA3SjfSpi7/Hpz53bvU6RAFhfXk/ouwr2yuJmUOopky916YptTKVovcxIOFaVLU8TmGWpCwbZ9L1Dd+5EiQavt/ueh2bXuz/l/CZpdezw0jyX80hy+ffQ+w0ejq7eXRQ3jvY9xK+GNysws0Cp5o/nv9J6iQapfdSiKXR2mfIsxR1/e7+oeXT67esAixU49Xvy5kXMyV3OnHGFwtUA5S4B+7NP4ETr58tULdHPkMJwgyskXSRf2OwAA///OGG3DOAIAAA=="
+        }
+      }
+    ],
+    "links": [
+      {
+        "path": "/etc/localtime",
+        "target": "../usr/share/zoneinfo/America/Argentina/Mendoza"
+      },
+      {
+        "path": "/etc/systemd/system/multi-user.target.wants/unbound.service",
+        "target": "/usr/lib/systemd/system/unbound.service"
+      },
+      {
+        "path": "/etc/systemd/system/multi-user.target.wants/tuned.service",
+        "target": "/usr/lib/systemd/system/tuned.service"
+      },
+      {
+        "path": "/etc/systemd/system/kdump.service.target",
+        "target": "/dev/null"
+      }
+    ]
+  },
+  "systemd": {
+    "units": [
+      {
+        "contents": "[Unit]\nDescription=Initial System Setup\n# We run after `systemd-machine-id-commit.service` to ensure that\n# `ConditionFirstBoot=true` services won't rerun on the next boot.\nAfter=systemd-machine-id-commit.service\nAfter=network-online.target\n# We run before `zincati.service` to avoid conflicting rpm-ostree\n# transactions.\nBefore=zincati.service\nConditionPathExists=!/var/lib/%N.stamp\n[Service]\nType=oneshot\nRemainAfterExit=yes\nExecStart=/usr/bin/sed -i 's/#DNSSEC=no/DNSSEC=yes/g' /etc/systemd/resolved.conf\nExecStart=/usr/bin/systemctl restart systemd-resolved\nExecStart=/usr/bin/rpm-ostree install firewalld tuned unbound\nExecStart=/usr/bin/rpm-ostree override remove cifs-utils samba-common-libs samba-client-libs libsmbclient libwbclient samba-common sssd-krb5-common sssd-ipa sssd-nfs-idmap sssd-ldap sssd-client sssd-ad sssd-common sssd-krb5 sssd-common-pac\nExecStart=/usr/bin/sed -i 's/nullok//g' /etc/pam.d/system-auth\nExecStart=/usr/bin/curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/modprobe.d/30_security-misc.conf -o /etc/modprobe.d/30_security-misc.conf\nExecStart=/usr/bin/curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/sysctl.d/30_security-misc.conf -o /etc/sysctl.d/30_security-misc.conf\nExecStart=/usr/bin/sed -i 's/kernel.yama.ptrace_scope=3/kernel.yama.ptrace_scope=1/g' /etc/sysctl.d/30_security-misc.conf\nExecStart=/usr/bin/sed -i 's/net.ipv4.icmp_echo_ignore_all=1/net.ipv4.icmp_echo_ignore_all=0/g' /etc/sysctl.d/30_security-misc.conf\nExecStart=/usr/bin/sed -i 's/net.ipv6.icmp.echo_ignore_all=1/net.ipv6.icmp.echo_ignore_all=0/g' /etc/sysctl.d/30_security-misc.conf\nExecStart=/usr/bin/curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/sysctl.d/30_silent-kernel-printk.conf -o /etc/sysctl.d/30_silent-kernel-printk.conf\nExecStart=/usr/bin/curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/sysctl.d/30_security-misc_kexec-disable.conf -o /etc/sysctl.d/30_security-misc_kexec-disable.conf\nExecStart=/usr/bin/curl https://raw.githubusercontent.com/GrapheneOS/infrastructure/main/chrony.conf -o /etc/chrony.conf\nExecStart=/usr/bin/mkdir -p /etc/systemd/system/NetworkManager.service.d\nExecStart=/usr/bin/curl https://gitlab.com/divested/brace/-/raw/master/brace/usr/lib/systemd/system/NetworkManager.service.d/99-brace.conf -o /etc/systemd/system/NetworkManager.service.d/99-brace.conf\nExecStart=/usr/bin/mkdir -p /etc/systemd/system/irqbalance.service.d\nExecStart=/usr/bin/curl https://gitlab.com/divested/brace/-/raw/master/brace/usr/lib/systemd/system/irqbalance.service.d/99-brace.conf -o /etc/systemd/system/irqbalance.service.d/99-brace.conf\nExecStart=/usr/bin/mkdir -p /etc/systemd/system/sshd.service.d\nExecStart=/usr/bin/curl https://raw.githubusercontent.com/GrapheneOS/infrastructure/main/systemd/system/sshd.service.d/limits.conf -o /etc/systemd/system/sshd.service.d/limits.conf\nExecStart=/bin/systemctl disable systemd-resolved\nExecStart=/bin/touch /var/lib/%N.stamp\nExecStart=/bin/systemctl --no-block reboot\n[Install]\nWantedBy=multi-user.target\n",
+        "enabled": true,
+        "name": "postinst.service"
+      },
+      {
+        "contents": "[Service]\nType=oneshot\nExecStart=/usr/sbin/setsebool container_use_cephfs off\nExecStart=/usr/sbin/setsebool virt_use_nfs off\nExecStart=/usr/sbin/setsebool virt_use_samba off\nRemainAfterExit=yes\n[Install]\nWantedBy=multi-user.target\n",
+        "enabled": true,
+        "name": "setsebool.service"
+      },
+      {
+        "enabled": true,
+        "name": "fstrim.timer"
+      },
+      {
+        "enabled": true,
+        "name": "systemd-oomd.service"
+      },
+      {
+        "enabled": false,
+        "mask": true,
+        "name": "rpm-ostree-countme.timer"
+      },
+      {
+        "enabled": false,
+        "name": "sshd.service"
+      },
+      {
+        "enabled": true,
+        "name": "sshd.socket"
+      }
+    ]
+  }
